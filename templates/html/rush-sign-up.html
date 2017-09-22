@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	{% include 'html/header.html' %}
+
+	<body>
+
+		{% include 'html/nav.html' %}
+		
+		<div class="container">
+			<div style="height: 15vh">
+				<div class="flex-center flex-column white-text">
+					<h1 class="animated fadeIn mb-4">SAM Rush 2017</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 flex-center">
+					<div class="card" style="width: 70%;">
+						<div class="card-body">
+							<h4 class="card-title">Rush Sign Up Form</h4>
+							<hr>
+							<form action="/add-pnm" method="POST">
+								<div class="md-form">
+									<i class="fa fa-user prefix grey-text"></i>
+									<input type="text" id="form-name" class="form-control">
+									<label for="form-name">Full Name</label>
+								</div>
+								<div class="md-form">
+									<i class="fa fa-envelope prefix grey-text"></i>
+									<input type="text" id="form-email" class="form-control">
+									<label for="form-email">Email</label>
+								</div>
+								<div class="md-form">
+									<i class="fa fa-phone prefix grey-text"></i>
+									<input type="text" id="form-phone" class="form-control">
+									<label for="form-phone">Phone Number</label>
+								</div>
+								<div class="form-group">
+									<input type="checkbox" class="filled-in" id="credits-checkbox">
+									<label for="credits-checkbox">12 credits completed at UMD?</label>
+								</div>
+								<div class="text-center">
+									<button type="submit" class="btn aqua-gradient btn-rounded">Sign Up</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 flex-center">
+					<div class="card" style="width: 70%;">
+						<div class="card-body">
+							<h4 class="card-title">Upload Existing Data</h4>
+							<p class="card-text">Upload a CSV of PNM data (such as from Google Forms) to our system.</p>
+							<hr>
+							<form action="/upload" method="POST" enctype="multipart/form-data">
+								<input type="file" name="file" />
+								<button type="submit" class="btn aqua-gradient btn-rounded">Upload</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br />
+			</div>
+		</div>
+		
+		{% include 'html/scripts.html' %}
+		
+	</body>
+</html>
